@@ -1,0 +1,18 @@
+<html>
+    <body>
+	<H2>Create new restaurant</H2><hr>
+        <form action="/create" method="POST" enctype="multipart/form-data">
+	    Name: <input name="name" required/><br>
+            Borough: <input name="borough"/><br>
+            Cuisine: <input name="cuisine"/><br>
+	    Street: <input name="street"/><br>
+            Building: <input name="building"/><br>
+	    Zipcode: <input name="zipcode"/><br>
+            GPS (lon.): <input type='number' step='any' name="coordLon"/><br>
+	    GPS (lat.): <input type='number' step='any' name="coordLat"/><br>
+            Photo: <input type="file" name="imagetoupload"/><br>
+            <input type="submit" value="Insert">
+        </form>
+	<a href="/">Home</a>
+    </body>
+</html>

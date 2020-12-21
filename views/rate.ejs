@@ -1,0 +1,11 @@
+<html>
+    <body>
+	<h3>Rate</h3>
+        <form action="/rate" method="POST">
+	    Score (1-10): <input type="number" name="score" max=10 min=1 required/>
+	    <br>
+	    <input type="hidden" name="_id" value=<%= _id %>>
+	    <input type="submit" value="Rate">
+	</form>
+    </body>
+</html>

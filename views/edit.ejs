@@ -1,0 +1,20 @@
+<html>
+    <body>
+	<H2><%= restaurant.name %></H2><hr>
+        <form action="/update" method="POST" enctype="multipart/form-data">
+	    Name: <input name="name" value="<%= restaurant.name %>"><br>
+            Borough: <input name="borough" value="<%= restaurant.borough %>"><br>
+            Cuisine: <input name="cuisine" value="<%= restaurant.cuisine %>"><br>
+	    Street: <input name="street" value="<%= restaurant.address.street %>"><br>
+            Building: <input name="building" value="<%= restaurant.address.building %>"><br>
+	    Zipcode: <input name="zipcode" value="<%= restaurant.address.zipcode %>"><br>
+	    GPS (lon.): <input name="coordLon" type='number' step='any' value=<%= restaurant.address.coord[0] %>><br>
+	    GPS (lat.): <input name="coordLat" type='number' step='any' value=<%= restaurant.address.coord[1] %>><br>
+            Photo: <input type="file" name="imagetoupload"><br>
+            <input type="hidden" name="_id" value="<%= restaurant._id %>">
+	    <input type="hidden" name="owner" value="<%= restaurant.owner %>">
+            <input type="submit" value="Update">
+        </form>
+	<a href="/">Home</a>
+    </body>
+</html>

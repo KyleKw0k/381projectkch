@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <H2>Restaurants</H2>
+	<p>User: <%= userid %> <a href="/logout">Logout</a> </p>
+	<p>Showing <%= nRestaurants %> document(s)</p>
+	<form action="/read" method="post">
+	    <select name='searchBy'>
+		<option value='name' selected>Name</option>
+		<option value='borough'>Borough</option>
+		<option value='cuisine'>Cuisine</option>
+	    </select>
+	    <input type="text" name="criteria" />
+	    <input type="submit" value="Search">
+	</form>
+	<a href="/create">Create new restaurant</a>
+	<table border=1px width=250%>
+	    <tr>
+		<th>Restaurant Name</th>
+  	    </tr>
+	    <% for (var r of restaurants) { %>
+	        <tr>
+		<td><a href="/display?_id=<%= r._id %>"><%= r.name %></a></td>
+	    	</tr>
+  	    <% } %>
+	</table>
+    </body>
+</html>
+

@@ -1,0 +1,22 @@
+{
+	"name": "rest2020kch381",
+	"description": "Express.js App",
+	"version": "0.0.2",
+	"dependencies": {
+		"express": "*",
+		"ejs": "*",
+		"cookie-session": "*",
+		"body-parser": "*",
+		"formidable": "*",
+		"mongodb": "*",
+		"fs": "*",
+		"assert": "*"
+	},
+	"engines": {
+		"node": ">=8.0.0",
+		"npm": ">=6.0.0"
+	},
+	"scripts": {
+		"start": "node server.js"
+	}
+}
